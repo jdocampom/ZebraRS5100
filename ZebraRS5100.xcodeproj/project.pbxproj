@@ -3,27 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		863A21422848FAAC0097FB73 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863A21412848FAAC0097FB73 /* CoreBluetooth.framework */; };
+		863A21442848FAB20097FB73 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863A21432848FAB20097FB73 /* ExternalAccessory.framework */; };
 		867CFCE228481B730035E666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867CFCE128481B730035E666 /* AppDelegate.swift */; };
 		867CFCE428481B730035E666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867CFCE328481B730035E666 /* SceneDelegate.swift */; };
 		867CFCE628481B730035E666 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867CFCE528481B730035E666 /* ViewController.swift */; };
-		867CFCE928481B730035E666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867CFCE728481B730035E666 /* Main.storyboard */; };
 		867CFCEB28481B750035E666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867CFCEA28481B750035E666 /* Assets.xcassets */; };
 		867CFCEE28481B750035E666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867CFCEC28481B750035E666 /* LaunchScreen.storyboard */; };
+		8682509028490CD600F8CA3A /* libsymbolbt-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682508F28490CD600F8CA3A /* libsymbolbt-sdk.a */; };
+		8682509228490ED500F8CA3A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8682509128490ED500F8CA3A /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		863A212E2848F36B0097FB73 /* ZebraRS5100-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZebraRS5100-Bridging-Header.h"; sourceTree = "<group>"; };
+		863A21412848FAAC0097FB73 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		863A21432848FAB20097FB73 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		867CFCDE28481B730035E666 /* ZebraRS5100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZebraRS5100.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		867CFCE128481B730035E666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		867CFCE328481B730035E666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		867CFCE528481B730035E666 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		867CFCE828481B730035E666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		867CFCEA28481B750035E666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		867CFCED28481B750035E666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		867CFCEF28481B750035E666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8682508F28490CD600F8CA3A /* libsymbolbt-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsymbolbt-sdk.a"; path = "symbolbt-sdk/libsymbolbt-sdk.a"; sourceTree = "<group>"; };
+		8682509128490ED500F8CA3A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8682509228490ED500F8CA3A /* libz.tbd in Frameworks */,
+				8682509028490CD600F8CA3A /* libsymbolbt-sdk.a in Frameworks */,
+				863A21442848FAB20097FB73 /* ExternalAccessory.framework in Frameworks */,
+				863A21422848FAAC0097FB73 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863A212F2848F5F40097FB73 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				863A212E2848F36B0097FB73 /* ZebraRS5100-Bridging-Header.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		863A21402848FAAC0097FB73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8682509128490ED500F8CA3A /* libz.tbd */,
+				8682508F28490CD600F8CA3A /* libsymbolbt-sdk.a */,
+				863A21432848FAB20097FB73 /* ExternalAccessory.framework */,
+				863A21412848FAAC0097FB73 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		867CFCD528481B730035E666 = {
 			isa = PBXGroup;
 			children = (
 				867CFCE028481B730035E666 /* ZebraRS5100 */,
 				867CFCDF28481B730035E666 /* Products */,
+				863A21402848FAAC0097FB73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +87,10 @@
 		867CFCE028481B730035E666 /* ZebraRS5100 */ = {
 			isa = PBXGroup;
 			children = (
+				863A212F2848F5F40097FB73 /* Helpers */,
 				867CFCE128481B730035E666 /* AppDelegate.swift */,
 				867CFCE328481B730035E666 /* SceneDelegate.swift */,
 				867CFCE528481B730035E666 /* ViewController.swift */,
-				867CFCE728481B730035E666 /* Main.storyboard */,
 				867CFCEA28481B750035E666 /* Assets.xcassets */,
 				867CFCEC28481B750035E666 /* LaunchScreen.storyboard */,
 				867CFCEF28481B750035E666 /* Info.plist */,
@@ -103,7 +134,7 @@
 				};
 			};
 			buildConfigurationList = 867CFCD928481B730035E666 /* Build configuration list for PBXProject "ZebraRS5100" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -127,7 +158,6 @@
 			files = (
 				867CFCEE28481B750035E666 /* LaunchScreen.storyboard in Resources */,
 				867CFCEB28481B750035E666 /* Assets.xcassets in Resources */,
-				867CFCE928481B730035E666 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +177,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		867CFCE728481B730035E666 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				867CFCE828481B730035E666 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		867CFCEC28481B750035E666 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,21 +312,27 @@
 				DEVELOPMENT_TEAM = D27X6VQP35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZebraRS5100/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is required to find, connect and communicate with nearby Zebra devices. ";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bluetooth is required to find, connect and communicate with nearby Zebra devices. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/symbolbt-sdk";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.jdocampom.ZebraRS5100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/juandiegoocampo/Developer/ZebraRS5100/ZebraRS5100/Helpers/ZebraRS5100-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/symbolbt-sdk/include/";
 			};
 			name = Debug;
 		};
@@ -318,21 +346,27 @@
 				DEVELOPMENT_TEAM = D27X6VQP35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZebraRS5100/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is required to find, connect and communicate with nearby Zebra devices. ";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bluetooth is required to find, connect and communicate with nearby Zebra devices. ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/symbolbt-sdk";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = co.jdocampom.ZebraRS5100;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/juandiegoocampo/Developer/ZebraRS5100/ZebraRS5100/Helpers/ZebraRS5100-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/symbolbt-sdk/include/";
 			};
 			name = Release;
 		};
