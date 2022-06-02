@@ -91,16 +91,24 @@ extension ViewController: ISbtSdkApiDelegate {
             print("Active Scanners is nil.")
         }
         
-        let result = self.apiInstance?.sbtEstablishCommunicationSession(Int32(3))
-        if let result = result {
+        if let result = self.apiInstance?.sbtEstablishCommunicationSession(Int32(3)) {
             if result == SBT_RESULT_SUCCESS {
                 print("Connection to scanner successfull")
-                self.apiInstance?.sbtEnableAutomaticSessionReestablishment(true, forScanner: Int32(3))
             } else {
                 print("Connection to scanner failed")
             }
         } else {
             print("Result is nil")
+        }
+        
+        if let autoConnect = self.apiInstance?.sbtEnableAutomaticSessionReestablishment(true, forScanner: Int32(3)) {
+            if autoConnect == SBT_RESULT_SUCCESS {
+                print("autoConnect Connection to scanner successfull")
+            } else {
+                print("autoConnect Connection to scanner failed")
+            }
+        } else {
+            print("autoConnect Result is nil")
         }
         
     }
