@@ -17,6 +17,6 @@
 #import "SbtScannerInfo.h"
 #import "SbtSdkDefs.h"
 #import "SbtSdkFactory.h"
-#import "ScannerAppEngine.h"
+//#import "ScannerAppEngine.h"
 
 #endif /* ZebraRS5100_Bridging_Header_h */
